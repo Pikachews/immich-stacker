@@ -2,12 +2,12 @@
 
 version=$(git describe --tags)
 
-# podman build . -t ghcr.io/pikachews/immich-stacker:${version}
-# podman build . -t ghcr.io/pikachews/immich-stacker:latest
-podman build . -t pikachews/immich-stacker:${version}
-podman build . -t pikachews/immich-stacker:latest
+# docker build . -t ghcr.io/pikachews/immich-stacker:${version}
+# docker build . -t ghcr.io/pikachews/immich-stacker:latest
+docker build . -t pikachews/immich-stacker:${version}
+docker build . -t pikachews/immich-stacker:latest
 
-# podman push ghcr.io/pikachews/immich-stacker:${version}
-# podman push ghcr.io/pikachews/immich-stacker:latest
-podman push pikachews/immich-stacker:${version}
-podman push pikachews/immich-stacker:latest
+# docker push ghcr.io/pikachews/immich-stacker:${version}
+# docker push ghcr.io/pikachews/immich-stacker:latest
+docker push pikachews/immich-stacker:${version}
+docker push pikachews/immich-stacker:latest
