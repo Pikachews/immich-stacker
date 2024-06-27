@@ -126,7 +126,7 @@ func main() {
 
 			if m.Match([]byte(a.OriginalFileName)) {
 				id := openapi_types.UUID(uuid.MustParse(a.Id))
-				key := string(m.ReplaceAll([]byte(a.OriginalFileName), []byte("")))
+				key := string(m.ReplaceAll([]byte(a.OriginalFileName), []byte(""))) + a.FileCreatedAt.Local().String()
 
 				s, ok := stacks[key]
 				if !ok {
